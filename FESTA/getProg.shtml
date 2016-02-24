@@ -1,0 +1,87 @@
+<HTML>
+<HEAD>
+  <TITLE>FESTA: Fragmented Exhaustive Search for TAgSNPs</TITLE>
+  <STYLE TYPE="text/css">@IMPORT URL("/common/pseudo-csg.css");</STYLE>
+</HEAD>
+<BODY>
+<!--#include virtual="/common/banner.inc" -->
+<!--#include virtual="/common/top.inc" -->
+<!--#include virtual="submenu.inc" -->
+<!--#include virtual="/common/topend.inc" -->
+
+<CENTER>
+<H1>Downloadable binaries for FESTA</H1>
+<P>
+<H3>Version: 2.0 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Date: 22nd December 2005</H3> 
+
+<TABLE WIDTH="70%" CELLSPACING="0" BORDER="1" CELLPADDING="7">
+  <TR>
+    <TD WIDTH="28%" VALIGN="TOP" BGCOLOR="#AABBCC">
+    <B>Platform</B></TD> 
+    <TD WIDTH="46%" VALIGN="TOP" BGCOLOR="#AABBCC">
+    <CENTER><B>File</B></CENTER></TD>
+    <TD WIDTH="16%" VALIGN="TOP" BGCOLOR="#AABBCC">
+    <CENTER><B>Size</B></CENTER></TD>
+  </TR>
+  <TR>
+    <TD WIDTH="28%" VALIGN="TOP">
+    Linux (x86)</TD> 
+    <TD WIDTH="46%" VALIGN="TOP">
+    <P><CENTER><A HREF="download/Ver2.0/FESTA_linux.tar.gz">FESTA_linux.tar.gz</A></CENTER></TD>
+    <TD WIDTH="16%" VALIGN="TOP">
+    <P><CENTER>818 kb</CENTER></TD>
+  </TR>
+  <TR>
+    <TD WIDTH="28%" VALIGN="TOP">
+    SunOS</TD> 
+    <TD WIDTH="46%" VALIGN="TOP">
+    <P><CENTER><!--<A HREF="download/FESTA_sun5.9.tar.gz">FESTA_sun5.9.tar.gz</A>-->Coming soon</CENTER></TD>
+    <TD WIDTH="16%" VALIGN="TOP">
+    <P><CENTER>--</CENTER></TD>
+  </TR>
+  <!--TR>
+    <TD WIDTH="38%">
+    Windows</TD> 
+    <TD WIDTH="36%">
+    <P><CENTER><A HREF="Windows-qtdt.tar.gz">Windows-qtdt.tar.gz</A></CENTER></TD>
+    <TD WIDTH="16%">
+    <P><CENTER>321 kb</CENTER></TD>
+  </TR-->
+  <TR>
+    <TD WIDTH="28%">
+    Macintosh OS X</TD> 
+    <TD WIDTH="46%">
+    <P><CENTER><A HREF="download/Ver2.0/FESTA_mac.tar.gz">FESTA_mac.tar.gz</A></CENTER></TD>
+    <TD WIDTH="16%">
+    <P><CENTER>565 kb</CENTER></TD>
+  </TR>
+  <TR>
+    <TD WIDTH="28%">
+    Unix</TD> 
+    <TD WIDTH="46%">
+    <P><CENTER><!--<A HREF="download/FESTA_unix.tar.gz">FESTA_unix.tar.gz</A>-->Coming soon</CENTER></TD>
+    <TD WIDTH="16%">
+    <P><CENTER>--</CENTER></TD>
+  </TR>
+  </TABLE>
+  <P>
+  <P>
+  <TABLE CELLSPACING="0" BORDER="0" CELLPADDING="10" WIDTH="100%">
+  <TR>
+    <TD COLSPAN="3" VALIGN="TOP" WIDTH="95%">
+	<B>Installation Instructions.</B> If required, create a sub-directory. Download the FESTA package that suits your OS into that 			directory. <A HREF="unpack.shtml">Unpack</A> the FESTA package in the directory. The FESTA package includes example files, the manual 		and the executable. The executable files is called FESTA. For convenience you may wish to add FESTA to the executable PATH of your
+	operating system.
+    </TD>
+  </TR>
+  <TR>
+    <TD COLSPAN="3" VALIGN="TOP" WIDTH="95%">
+    	You may want to use <A HREF="http://csg.sph.umich.edu/abecasis/fugue">FUGUE</A> (Recommended), for generating the input files for 		FESTA.
+    </TD>
+  </TR>
+</TABLE>
+</CENTER>
+
+<!--#include virtual="/common/bottom.inc"-->
+
+</BODY>
+</HTML>

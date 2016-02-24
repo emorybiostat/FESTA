@@ -1,0 +1,24 @@
+************************************************************************
+
+Command: FESTA -d sample.xt -t 0.8 -a 1 -o Algorithm_Results_Greedy.out
+
+************************************************************************
+
+Cl no.	Cl size	Gr set size
+1	17	1
+2	9	1
+3	13	1
+4	1	1
+5	1	1
+6	1	1
+7	1	1
+8	2	1
+9	1	1
+10	2	1
+11	2	1
+
+Time taken = 0.03 seconds
+
+Number of markers: 50
+No of cluster: 11
+Total tagSNP size of Greedy solution: 11

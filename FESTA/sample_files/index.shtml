@@ -1,0 +1,328 @@
+<HTML>
+<HEAD>
+  <TITLE>FESTA: Sample Files</TITLE>
+  <STYLE TYPE="text/css">@IMPORT URL("/common/pseudo-csg.css");</STYLE>
+</HEAD>
+<BODY>
+<!--#include virtual="/common/banner.inc" -->
+<!--#include virtual="/common/top.inc" -->
+<!--#include virtual="../submenu.inc" -->
+<!--#include virtual="/common/topend.inc" -->
+<P><CENTER><TABLE CELLSPACING="0" BORDER="0" CELLPADDING="10" WIDTH="100%">
+  <TR>
+    <TD WIDTH="5%" VALIGN="TOP" ROWSPAN="10">
+    &nbsp;</TD> 
+    <TD VALIGN="TOP" WIDTH="95%">
+    <H1><CENTER>Sample Files for FESTA</CENTER></H1>
+    <P>This section describes the <A HREF="#input">input files</A> and <A HREF="#output">output files</A> for FESTA. It also includes small examples for all types of files associated with FESTA.
+    </TD>
+  </TR>
+  <TR>
+    <TD VALIGN="TOP" WIDTH="95%">
+    <H3><A NAME="input">Input Files</A></H3>
+    FESTA uses four kind of input files, viz., the linkage disequilibrium file,  the map file, the frequency file and the include/exclude file.
+    The LD file is required for the functioning of the algorithm, whereas the other three files can be used to tailor the algorithm. A sample of each of the four kinds of 
+    files is given below, to illustrate the format of the files.<BR/>
+    The input files for FESTA are generated using <A HREF="http://csg.sph.umich.edu/abecasis/fugue">FUGUE</A>. <A HREF="http://csg.sph.umich.edu/abecasis/fugue">FUGUE</A> can be 
+    used to generate the LD file along with the map and frequency files.
+    </TD>
+  </TR>
+
+  <TR>
+    <TD VALIGN="TOP" WIDTH="95%">
+    <B>Linkage Disequilibrium (LD) file:</B> This file contains the pairwise LD parameter between all the SNPs (markers) in the region. Therefore, a line in the LD file must
+    contain the names of the SNPs along with the LD between the pair of markers. If a pair is not present in this LD file, it is assumed that they are not in LD, i.e. the r&sup2; 
+    parameter between them is 0. The first few lines of a small sample file are given below. The '--cols' switch can be used to tell the program which columns in the input LD file
+    contain the information, viz. the marker names and the LD value. <BR/>
+    <I>NOTE: <BR/>1. We use the r&sup2; value for the Linkage Disequilibrium information, but the user can use any measure, such as D', etc.<BR/>2. The first line of the LD file must
+    not contain any information. It should be a header line.</I>
+    <P>
+    <CENTER>
+    <TABLE BORDER="1" CELLPADDING="10" CELLSPACING="0">
+    <TR>
+    <TH BGCOLOR="#AABBCC"><CENTER>&nbsp;File: sample.xt</CENTER></TH>
+    </TR>
+    <TR>
+    <TD BGCOLOR="#FFFFFF">
+    <PRE>
+LABEL1		LABEL2		DELTASQ
+rs10199046:119	rs10221549:119	0.77778
+rs10199046:119	rs10221616:119	0.77778
+rs10199046:119	rs1528799:88.2	0.70718
+rs10199046:119	rs2091574:96.2	0.77778
+rs10199046:119	rs6712493:116.2	0.77778
+rs10199046:119	rs6721908:116.1	1.00000
+rs10199046:119	rs6734029:116.1	1.00000
+rs10199046:119	rs6737381:116.1	1.00000
+rs10199046:119	rs7578318:116.2	1.00000
+rs10199046:119	rs7591147:116.1	1.00000
+rs10199046:119	rs888107:111.3	1.00000
+rs10202962:119	102620507:0	0.00994
+rs10202962:119	102892545:0	0.15944</PRE></TD>
+    </TR>
+    </TABLE>
+    </CENTER>
+    The complete sample LD file can be viewed, in ASCII format, at the following location: <A HREF="sample.xt">Complete Sample LD file.</a>.
+    </TD>
+  </TR>
+  <TR>
+    <TD VALIGN="TOP" WIDTH="95%">
+    <B>Map (Physical Position) file:</B> This file contains a map (physical position) of the SNPs described by the LD file. It may also contain other SNPs not present in the LD file. A single line in the
+    map file contains three whitespace seperated columns; (i) the first column contains the chromosome number/name, (ii) the second column contains the SNP name, and (iii) the third
+    column contains the position of the SNP in the region (given in kb or in bases). Again, the first few lines of a sample map file are reproduced below.
+    <P>
+    <CENTER>
+    <TABLE BORDER="1" CELLPADDING="10" CELLSPACING="0">
+    <TR>
+    <TH BGCOLOR="#AABBCC"><CENTER>&nbsp;File: sample.map<CENTER></TH>
+    </TR>
+    <TR>
+    <TD>
+    <PRE>
+2	rs10199046:119	51.644128
+2	rs10202962:119	51.641796
+2	rs10221549:119	51.656756
+2	rs10221616:119	51.656141
+2	rs1206397:100.2	51.642273
+2	rs1206413:116.2	51.63795
+2	rs1528799:88.2	51.657298</PRE>
+    </TD>
+    </TR>
+    </TABLE>
+    </CENTER>
+    The complete sample map file can be viewed, in ASCII format, at the following location: <A HREF="sample.map1">Complete Sample Map file.</A>
+    </TD>
+  </TR>
+  <TR>
+    <TD VALIGN="TOP" WIDTH="95%">
+    <B>Frequency file:</B> The frequency file contains allele frequencies of all the SNPs. The format of this file is very specific and its
+    description can be found in detail in the manual. As a quick reference, a part of the sample frequency file is included below.
+    <P>
+    <CENTER>
+    <TABLE BORDER="1" CELLPADDING="10" CELLSPACING="0">
+    <TR>
+    <TH BGCOLOR="#AABBCC"><CENTER>&nbsp;File: sample.freq<CENTER></TH>
+    </TR>
+    <TR>
+    <TD>
+    <PRE>
+M rs10199046:119
+A   4 0.87500
+A   2 0.12500
+M rs10202962:119
+A   4 0.54237
+A   1 0.45763
+M rs10221549:119
+A   2 0.90000
+A   3 0.10000
+M rs10221616:119
+A   4 0.90000
+A   2 0.10000</PRE>
+    </TD>
+    </TR>
+    </TABLE>
+    </CENTER>
+    The complete sample frequency file can be viewed, in ASCII format, at the following location: <A HREF="sample.freq">Complete Sample Frequency file.</A>
+  </TD>
+  </TR>
+  <TR>
+    <TD VALIGN="TOP" WIDTH="95%">
+    <B>Include/Exclude files:</B> FESTA can be asked to include/exclude some markers from the final tagSNP set solution. This is accomplished by using other input file(s).
+    The include/exclude file contains markers that must be included/excluded in/from the final tagSNP set. A sample include file is shown below. Each line in the include file
+    contains the name of a marker that must be included in the final tagSNP solution. The exclude file format is identical.
+    <P>
+    <CENTER>
+    <TABLE BORDER="1" CELLPADDING="10" CELLSPACING="0">
+    <TR>
+    <TH BGCOLOR="#AABBCC"><CENTER>&nbsp;File: sample.include<CENTER></TH>
+    </TR>
+    <TR>
+    <TD>
+    <PRE>
+rs6706917:116.1
+rs6707563:116.1
+rs6734029:116.1
+rs6735432:116.1</PRE>
+    </TD>
+    </TR>
+    </TABLE>
+    </CENTER>
+  </TD>
+  </TR>
+  <TR>
+    <TD VALIGN="TOP" WIDTH="95%">
+    <H3><A NAME="output">Output Files</A></H3>
+    FESTA has one primary output file, which contains a summary of the operation and output of the algorithm. In addition to the result file, FESTA can be configured to output two
+    other kind of files, viz., the Connection Information file and the 'Criterion tagSNP set' file, which contains the names of the markers in one possible solution that has been
+    obtained by optimizing a criterion. In this section, we will take a look at the output files produced by FESTA.
+    </TD>
+  </TR>
+  <TR>
+    <TD VALIGN="TOP" WIDTH="95%">
+    <B>Result file:</B> The result file comes in different flavors/formats depending on how FESTA was configured. I may contain only the greedy results or it may contain both
+    greedy and greedy-exhaustive tagSNP picking results. In addition, it may also contain the physical sizes of the precincts, the size of the double covers, etc. It will also
+    include a summary of the results at the end of the file. Three sample output result files are attached below, along with an explanation.
+    <P>
+    The following result file contains only the greedy results of the FESTA algorithm.
+    <CENTER>
+    <TABLE BORDER="1" CELLPADDING="10" CELLSPACING="0">
+    <TR>
+    <TH BGCOLOR="#AABBCC"><CENTER>&nbsp;File: Algorithm_Results_Greedy<CENTER></TH>
+    </TR>
+    <TR>
+    <TD>
+    <PRE>
+Cl no.	Cl size	Gr set size
+1	17	1
+2	9	1
+...
+10	2	1
+11	2	1
+
+Time taken = 0.03 seconds
+
+Number of markers: 50
+No of cluster: 11
+Total tagSNP size of Greedy solution: 11</PRE>
+    </TD>
+    </TR>
+    </TABLE>
+    </CENTER><P>
+    The next result file contains the greedy and greedy-exhaustive tagSNP picking output along with the physical sizes of the precincts.
+    <CENTER>
+    <TABLE BORDER="1" CELLPADDING="10" CELLSPACING="0">
+    <TR>
+    <TH BGCOLOR="#AABBCC"><CENTER>&nbsp;File: Algorithm_Results<CENTER></TH>
+    </TR>
+    <TR>
+    <TD>
+    <PRE>
+Cl no.	Cl size	Gr set size	GrEx set size	No.Sols		Physical size
+1	17	1		1		17		0.008231
+2	9	1		1		9		0.003566
+...
+10	2	1		1		2		0.001477
+11	2	1		1		2		0.000028
+
+Time taken = 0.040000 seconds
+
+Number of markers: 50
+No of cluster: 11
+Number of clusters where greedy marker removal had to be performed before exhaustive search: 0
+Total tagSNP size of Greedy solution: 11
+Total tagSNP size of Greedy Exhaust solution: 11</PRE>
+    </TD>
+    </TR>
+    </TABLE>
+    </CENTER><P>
+    The last example result file contains double cover results instead of physical sizes in addition to the greedy and greedy-exhaustive results.
+    <CENTER>
+    <TABLE BORDER="1" CELLPADDING="10" CELLSPACING="0">
+    <TR>
+    <TH BGCOLOR="#AABBCC"><CENTER>&nbsp;File: Algorithm_Results_Double_Cover<CENTER></TH>
+    </TR>
+    <TR>
+    <TD>
+    <PRE>
+Cl no.	Cl size	Gr set size	GrEx set size	No.Sols	Double Cover size
+1	17	1		1		17	1
+2	9	1		1		9	1
+...
+10	2	1		1		2	1
+11	2	1		1		2	1
+
+Time taken = 0.120000 seconds
+
+Number of markers: 50
+No of cluster: 11
+Number of clusters where greedy marker removal had to be performed before exhaustive search: 0
+Total tagSNP size of Greedy solution: 11
+Total tagSNP size of Greedy Exhaust solution: 11</PRE>
+    </TD>
+    </TR>
+    </TABLE>
+    </CENTER><P>
+    In order to view the complete result files in ASCII format, click on the following links: <A HREF="Algorithm_Results_Greedy">Result file 1</A>, <A
+    HREF="Algorithm_Results">Result file 2</A>, <A HREF="Algorithm_Results_Double_Cover">Result file 3</A>.
+    </TD>
+  </TR>  
+  <TR>
+    <TD VALIGN="TOP" WIDTH="95%">
+    <B>Connection Information file:</B> The Connection Information file contains the information regarding the memebers of the different precincts. It has 'precinct by
+    precinct' information of the SNPs and their connected neighbors (for the given threshold). A part of an example file is detailed below.
+    <P>
+    <CENTER>
+    <TABLE BORDER="1" CELLPADDING="10" CELLSPACING="0">
+    <TR>
+    <TH BGCOLOR="#AABBCC"><CENTER>&nbsp;File: Connection_Information<CENTER></TH>
+    </TR>
+    <TR>
+    <TD>
+    <PRE>
+...
+
+Precinct number 7
+rs1528800:116.2 ::	
+
+Precinct number 8
+rs2216132:111.3 ::	rs6735432:116.1, 
+rs6735432:116.1 ::	rs2216132:111.3, 
+
+Precinct number 9
+rs2540989:116.2 ::	
+
+Precinct number 10
+BI112308:0 ::	rs1206413:116.2, 
+rs1206413:116.2 ::	BI112308:0, 
+
+...</PRE>
+    </TD>
+    </TR>
+    </TABLE>
+    </CENTER><P>
+    To see the complete connection information file, in ASCII format, follow the link: <A HREF="Connection_Information">Connection Information file</A>.
+    </TD>  
+  </TR>
+  <TR>
+    <TD VALIGN="TOP" WIDTH="95%">
+    <B>'Criterion tagSNP Set' file:</B> This file contains one set of SNPs that tag all the SNPs in the LD file. This set is chosen based on a criterion, such as maximizing or
+    minimizing the average LD value between tagSNPs, or minimizing the minor allele frequency of the tagSNPs. For a longer, more exhaustive discussion on criteria files, please
+    refer to the manual on FESTA. All criteria files have the same format. One such criterion file is reproduced below.
+    <P>
+    <CENTER>
+    <TABLE BORDER="1" CELLPADDING="10" CELLSPACING="0">
+    <TR>
+    <TH BGCOLOR="#AABBCC"><CENTER>&nbsp;File: Criteria_1<CENTER></TH>
+    </TR>
+    <TR>
+    <TD>
+    <PRE>
+Single cover SNPs selected by criteria 1
+
+rs1206397:100.2
+rs1528800:116.2
+rs2216132:111.3
+rs2540989:116.2
+rs6545221:116.1
+rs7349275:116.1
+102620507:0
+102892545:0
+BI112308:0
+BI112570:0
+BI112835:0</PRE>
+    </TD>
+    </TR>
+    </TABLE>
+    </CENTER><P>
+    There are 5 sample criteria files; to view them, use the following links: <A HREF="Criteria_1">Criteria file 1<A>, <A HREF="Criteria_2">Criteria file 2<A>, <A
+    HREF="Criteria_3"> Criteria file 3</A>, <A HREF="Criteria_4">Criteria file 4<A>, <A HREF="Criteria_5">Criteria file 5<A>.
+    </TD>  
+  </TR>
+  
+</TABLE>
+</CENTER>
+
+<!--#include virtual="/common/bottom.inc"-->
+
+</BODY>
+</HTML>

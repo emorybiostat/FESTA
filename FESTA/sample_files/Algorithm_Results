@@ -1,0 +1,26 @@
+**********************************************************************************
+
+Command: FESTA -d sample.xt -m sample.map -t 0.8 -z -o Algorithm_Results.out
+
+**********************************************************************************
+
+Cl no.	Cl size	Gr set size	GrEx set size	No.Sols		Physical size
+1	17	1		1		17		0.008231
+2	9	1		1		9		0.003566
+3	13	1		1		13		0.002931
+4	1	1		1		1		0.000000
+5	1	1		1		1		0.000000
+6	1	1		1		1		0.000000
+7	1	1		1		1		0.000000
+8	2	1		1		2		0.001199
+9	1	1		1		1		0.000000
+10	2	1		1		2		0.001477
+11	2	1		1		2		0.000028
+
+Time taken = 0.040000 seconds
+
+Number of markers: 50
+No of cluster: 11
+Number of clusters where greedy marker removal had to be performed before exhaustive search: 0
+Total tagSNP size of Greedy solution: 11
+Total tagSNP size of Greedy Exhaust solution: 11

@@ -1,0 +1,29 @@
+**************************************************************************************************
+
+Command: FESTA -d sample.xt -m sample.map -f sample.freq -t 0.8 -c -T Connection_Information.out
+         --double-cover -o Algorithm_Results_Double_Cover.out
+
+This command also created the 5 criteria files and also the output file Connection_Information.out
+
+**************************************************************************************************
+
+Cl no.	Cl size	Gr set size	GrEx set size	No.Sols	Double Cover size
+1	17	1		1		17	1
+2	9	1		1		9	1
+3	13	1		1		13	1
+4	1	1		1		1	0
+5	1	1		1		1	0
+6	1	1		1		1	0
+7	1	1		1		1	0
+8	2	1		1		2	1
+9	1	1		1		1	0
+10	2	1		1		2	1
+11	2	1		1		2	1
+
+Time taken = 0.120000 seconds
+
+Number of markers: 50
+No of cluster: 11
+Number of clusters where greedy marker removal had to be performed before exhaustive search: 0
+Total tagSNP size of Greedy solution: 11
+Total tagSNP size of Greedy Exhaust solution: 11
